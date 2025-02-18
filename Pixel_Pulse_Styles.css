@@ -377,6 +377,7 @@ footer a:hover {
     }
 }
 
+/* Comments Section */
 .comments {
     margin-top: 2rem;
     padding: 1rem;
@@ -492,12 +493,14 @@ footer a:hover {
     }
 }
 
+
 /* Specific Sections */
 .tech-section,
 .business-section,
 .innovation-section,
 .security-section,
-.advice-section {
+.advice-section
+.buying-guide-section {
     margin: 20px;
     padding: 20px;
     background-color: #f9f9f9;
@@ -508,7 +511,8 @@ footer a:hover {
 .business-section h2,
 .innovation-section h2,
 .security-section h2,
-.advice-section h2 {
+.advice-section h2
+.buying-guide-section h2 {
     margin-bottom: 20px;
     color: var(--primary-color);
     font-size: 2em;
