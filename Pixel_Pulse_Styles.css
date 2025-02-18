@@ -319,6 +319,62 @@ footer a:hover {
     footer a:hover {
         color: var(--primary-color);
     }
+    
+    .section,
+    .tech-section,
+    .business-section,
+    .innovation-section,
+    .security-section,
+    .advice-section {
+        background-color: var(--background-dark);
+        color: var(--text-dark);
+    }
+
+    .section h2,
+    .tech-section h2,
+    .business-section h2,
+    .innovation-section h2,
+    .security-section h2,
+    .advice-section h2 {
+        color: var(--primary-color);
+    }
+
+    .article {
+        background-color: var(--background-dark);
+        color: var(--text-dark);
+    }
+
+    .article:hover {
+        background-color: #1e1e1e; /* Slightly lighter dark background for hover */
+    }
+
+    .article-title {
+        color: var(--text-dark);
+    }
+
+    .article-summary {
+        color: #a0a0a0; /* Lighter gray for summary text in dark mode */
+    }
+
+    .comments {
+        border-top-color: var(--border-dark);
+    }
+
+    .comments form input,
+    .comments form textarea {
+        background-color: var(--background-dark);
+        color: var(--text-dark);
+        border-color: var(--border-dark);
+    }
+
+    .comments form button {
+        background-color: var(--primary-color);
+        color: var(--text-dark);
+    }
+
+    .comments form button:hover {
+        background-color: var(--secondary-color);
+    }
 }
 
 .comments {
