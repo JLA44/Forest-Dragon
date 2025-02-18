@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pixel Pulse - Signup Page</title>
+    <style>
+        h2 {
+            text-align: center;
+            color: rgb(157, 14, 157);
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            margin: 0 auto;
+        }
+        input, button {
+            margin-bottom: 10px;
+            padding: 10px;
+            font-size: 1em;
+        }
+        .errorMessage {
+            color: red;
+            font-size: 0.9em;
+            margin: 10px 0;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Sign Up</h2>
+        <form>
+            <input type="text" name="username" placeholder="Username" required>
+            <input type="password" name="password" placeholder="Password" required>
+            <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+            <div id="errorMessage" class="errorMessage"></div>
+            <button type="submit">Sign Up</button>
+        </form>
+    </div>
+    <script scr=signup.js></script>
+</body>
+</html>

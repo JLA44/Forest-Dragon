@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Results</title>
+    <link rel="stylesheet" href="../Pixel_Pulse_Styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-row">
+            <img src="../Images/Logo.png" alt="Pixel Pulse Logo" class="logo">
+            <h1 class="website-name">Pixel Pulse</h1>
+        </div>
+        <nav class="nav">
+            <a href="Trending.html">Trending</a>
+            <a href="Tech.html">Tech</a>
+            <a href="Innovation.html">Innovation</a>
+            <a href="Business.html">Business</a>
+            <a href="Security.html">Security</a>
+            <a href="Advice.html">Advice</a>
+            <a href="Buying_Guides.html">Buying Guides</a>
+        </nav>
+    </header>
+
+    <div class="login-popup" id="loginPopup">
+        <img src="../Images/Logo.png" alt="Pixel Pulse Logo" class="logo_login">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password" required>
+            <div id="errorMessage" class="errorMessage"></div>
+            <button type="submit">Login</button>
+        </form>
+        <a href="signup.html" id="signupLink">Don't have an account? Sign Up</a>
+        <p class="social-media-logins">--------------------or-------------------</p>
+        <button class="social-login"><i class="fab fa-facebook-f"></i>Login with Facebook</button>
+        <button class="social-login"><i class="fab fa-google"></i>Login with Google</button>
+    </div>
+    
+    <div class="search-popup" id="searchPopup">
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search..." required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <section class="search-results">
+            <h2>Search Results</h2>
+            <div id="resultsContainer"></div>
+        </section>
+    </div>
+    
+    <footer>
+        <h2>Capture the Rhythm of Technology</h2>
+        <p>Pixel Pulse 2025, A Joaquin Lewis-Atkins Company. All rights reserved.</p>
+        <div>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+    </footer>
+    
+    <script src="../SearchResults.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pixel Pulse - Your source for the latest in tech, innovation, and business trends.">
+    <title>Pixel Pulse</title>
+    <link rel="stylesheet" href="Pixel_Pulse_Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-row">
+            <img src="Images/Logo.png" alt="Pixel Pulse Logo" class="logo">
+            <h1 class="website-name">Pixel Pulse</h1>
+            <div class="icons">
+                <button class="icon" id="profileIcon" aria-label="Profile">
+                    <img src="Images/Profile_icon.png" alt="Profile Icon">
+                </button>
+                <button class="icon" id="searchIcon" aria-label="Search">
+                    <img src="Images/Search_icon.png" alt="Search Icon">
+                </button>
+            </div>
+        </div>
+        
+        <nav class="nav">
+            <a href="Pages/Trending.html">Trending</a>
+            <a href="Pages/Tech.html">Tech</a>
+            <a href="Pages/Innovation.html">Innovation</a>
+            <a href="Pages/Business.html">Business</a>
+            <a href="Pages/Security.html">Security</a>
+            <a href="Pages/Advice.html">Advice</a>
+            <a href="Pages/Buying_Guides.html">Buying Guides</a>
+        </nav>
+    </header>
+
+    <div class="login-popup" id="loginPopup">
+        <img src="Images/Logo.png" alt="Pixel Pulse Logo" class="logo_login">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password" required>
+            <div id="errorMessage" class="errorMessage"></div>
+            <button type="submit">Login</button>
+        </form>
+        <a href="Pages/signup.html" id="signupLink">Don't have an account? Sign Up</a>
+        <p class="social-media-logins">--------------------or-------------------</p>
+        <button class="social-login"><i class="fab fa-facebook-f"></i>Login with Facebook</button>
+        <button class="social-login"><i class="fab fa-google"></i>Login with Google</button>
+    </div>
+    
+    <div class="search-popup" id="searchPopup">
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search..." required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    
+    <div class="container">
+        <section class="margin_story">
+            <h2>Today's Stories</h2>
+            <p class="story">Green Tech Startups to Watch in 2025</p>
+            <p class="story">Smart Cities: The Future of Urban Living</p>
+            <p class="story">The Evolution of Wearable Tech: What's Next?</p>
+            <p class="story">The Role of Robotics in Modern Manufacturing</p>
+            <p class="story">The Rise of Augmented Reality in Everyday Life</p>
+            <img src="Images/Laptops.png" alt="Modern laptops on a desk" class="image_articles">
+            <img src="Images/Consoles.png" alt="Gaming consoles arranged neatly" class="image_articles">
+        </section>
+        
+        <section class="articles">
+            <h2>The Rise of Quantum Computing: What It Means for the Future</h2>
+            <p>Quantum computing is no longer just a buzzword; 
+                it's becoming a reality with the potential to revolutionize industries. 
+                In this article, we delve into the fundamentals of quantum computing, 
+                how it differs from classical computing, and the groundbreaking possibilities it offers. 
+                We explore real-world applications, such as drug discovery, cryptography, 
+                and artificial intelligence, and discuss the challenges and future prospects of this technology.</p>
+            
+            <h2>5G Technology: Transforming Connectivity and Beyond</h2>
+            <p>5G technology is reshaping the landscape of wireless communication, promising faster speeds, lower latency, 
+                and increased connectivity. This article explores the key features and benefits of 5G, 
+                its impact on various sectors such as healthcare, transportation, and smart cities, 
+                and the challenges associated with its widespread adoption. 
+                We also look at the future of 5G and how it will pave the way for innovations like the Internet of Things (IoT) and autonomous vehicles.</p>
+            
+            <h2>The Impact of 6G Technology on Future Connectivity</h2>
+            <p>While 5G technology is still being rolled out globally, 
+                the tech industry is already buzzing about the next big leap: 6G. 
+                With promises of even faster speeds, lower latency, and a host of new applications, 
+                6G is poised to revolutionize the way we connect and interact with technology.</p>
+            
+            <section class="comments">
+                <h2>Comments</h2>
+                <form id="commentForm">
+                    <label for="commentName">Name:</label>
+                    <input type="text" id="commentName" placeholder="Your name" required>
+                    <label for="commentText">Comment:</label>
+                    <textarea id="commentText" placeholder="Your comment" required></textarea>
+                    <button type="submit">Submit</button>
+                </form>
+                <div id="commentsContainer">
+                </div>
+            </section>
+
+            <div>
+                <fieldset>
+                    <legend>Top Stories This Week</legend>
+                    <ol>
+                        <li>The Future of AI: Navigating the Path to Ethical Innovation</li>
+                        <li>5G Revolution: How It's Shaping Our Connected World</li>
+                        <li>Green Tech: Innovations Paving the Way for a Sustainable Future</li>
+                    </ol>
+                </fieldset>
+            </div>
+            
+            <div>
+                <fieldset>
+                    <legend>Recommendations</legend>
+                    <ol>
+                        <li>Best Phones on the Market (and How They Compare to Others)</li>
+                        <li>Everything Required to Keep Warm in the Office & Accessories</li>
+                        <li>Best Gaming Laptops Available: Expert Tested</li>
+                    </ol>
+                </fieldset>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <h2>Capture the Rhythm of Technology</h2>
+        <p>Pixel Pulse 2025, A Joaquin Lewis-Atkins Company. All rights reserved.</p>
+        <div>
+            <a href="Pages/privacy-policy.html">Privacy Policy</a>
+            <a href="Pages/terms-of-service.html">Terms of Service</a>
+        </div>
+    </footer>
+    
+    <script src="Login.js"></script>
+    <script src="Search.js"></script>
+    <script src="Mode_switch.js"></script>
+    <script src="Comments.js"></script>
+</body>
+</html>

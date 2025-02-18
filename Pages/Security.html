@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Security Page - Stay updated on the latest in cybersecurity.">
+    <title>Pixel Pulse - Security</title>
+    <link rel="stylesheet" href="../Pixel_Pulse_Styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-row">
+            <a href="../index.html">
+                <img src="../Images/Logo.png" alt="Pixel Pulse Logo" class="logo">
+            </a>
+            <h1 class="website-name">Pixel Pulse</h1>
+            <div class="icons">
+                <button class="icon" id="profileIcon" aria-label="Profile">
+                    <img src="../Images/Profile_icon.png" alt="Profile Icon">
+                </button>
+                <button class="icon" id="searchIcon" aria-label="Search">
+                    <img src="../Images/Search_icon.png" alt="Search Icon">
+                </button>
+            </div>
+        </div>
+
+        <nav class="nav">
+            <a href="Trending.html">Trending</a>
+            <a href="Tech.html">Tech</a>
+            <a href="Innovation.html">Innovation</a>
+            <a href="Business.html">Business</a>
+            <a href="Security.html">Security</a>
+            <a href="Advice.html">Advice</a>
+            <a href="Buying_Guides.html">Buying Guides</a>
+        </nav>
+    </header>
+
+    <div class="login-popup" id="loginPopup">
+        <img src="../Images/Logo.png" alt="Pixel Pulse Logo" class="logo_login">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Username" required>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password" required>
+            <div id="errorMessage" class="errorMessage"></div>
+            <button type="submit">Login</button>
+        </form>
+        <a href="signup.html" id="signupLink">Don't have an account? Sign Up</a>
+        <p class="social-media-logins">--------------------or-------------------</p>
+        <button class="social-login"><i class="fab fa-facebook-f"></i>Login with Facebook</button>
+        <button class="social-login"><i class="fab fa-google"></i>Login with Google</button>
+    </div>
+    
+    <div class="search-popup" id="searchPopup">
+        <form id="searchForm">
+            <input type="text" id="searchInput" placeholder="Search..." required>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <section class="security-section section">
+            <h2>Cybersecurity Updates</h2>
+            <!-- Article 1 -->
+            <div class="article">
+                <img src="../Images/SecurityImage1.jpg" alt="Security Image 1">
+                <div class="article-content">
+                    <h3 class="article-title">Protecting Your Data from Ransomware</h3>
+                    <p class="article-summary">Learn how to safeguard your data from ransomware attacks and what to do if you become a victim.</p>
+                </div>
+            </div>
+            <!-- Article 2 -->
+            <div class="article">
+                <img src="../Images/SecurityImage2.jpg" alt="Security Image 2">
+                <div class="article-content">
+                    <h3 class="article-title">The Rise of Zero-Trust Security</h3>
+                    <p class="article-summary">Discover how zero-trust security models are becoming the standard for protecting sensitive information.</p>
+                </div>
+            </div>
+            <!-- Article 3 -->
+            <div class="article">
+                <img src="../Images/SecurityImage3.jpg" alt="Security Image 3">
+                <div class="article-content">
+                    <h3 class="article-title">Securing IoT Devices in a Connected World</h3>
+                    <p class="article-summary">Explore the challenges and solutions for securing Internet of Things (IoT) devices in an increasingly connected world.</p>
+                </div>
+            </div>
+            <!-- Add more security articles as needed -->
+        </section>
+    </div>
+
+    <footer>
+        <h2>Capture the Rhythm of Technology</h2>
+        <p>Pixel Pulse 2025, A Joaquin Lewis-Atkins Company. All rights reserved.</p>
+        <div>
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="terms-of-service.html">Terms of Service</a>
+        </div>
+    </footer>
+    
+    <script src="../Login.js"></script>
+    <script src="../Search.js"></script>
+    <script src="../Mode_switch.js"></script>
+</body>
+</html>
