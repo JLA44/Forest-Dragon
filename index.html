@@ -1,71 +1,90 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html> <!-- Document type declaration for HTML5 -->
+<html lang="en"> <!-- Language of the document is set to English -->
+<head> <!-- Head section of the document -->
+    <meta charset="UTF-8"> <!-- Character encoding set to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Viewport meta tag for responsive design -->
     <meta name="description" content="Pixel Pulse - Your source for the latest in tech, innovation, and business trends.">
-    <title>Pixel Pulse</title>
-    <link rel="stylesheet" href="Pixel_Pulse_Styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Pixel Pulse</title> <!-- Title of the website -->
+    <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="Pixel_Pulse_Styles.css"> <!-- Link to the CSS file for the website -->
+    <!-- Link to Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- Link to the Font Awesome file for the icons -->
 </head>
 <body>
     <header class="header">
         <div class="header-row">
-            <img src="Images/Logo.png" alt="Pixel Pulse Logo" class="logo">
-            <h1 class="website-name">Pixel Pulse</h1>
+            <!-- Website logo -->
+            <img src="Images/Logo.png" alt="Pixel Pulse Logo" class="logo"> <!-- Logo image Gets imported in from the images file within the document -->
+            <!-- Website name -->
+            <h1 class="website-name">Pixel Pulse</h1> 
             <div class="icons">
+                <!-- Profile icon button -->
                 <button class="icon" id="profileIcon" aria-label="Profile">
                     <img src="Images/Profile_icon.png" alt="Profile Icon">
                 </button>
-                <button class="icon" id="searchIcon" aria-label="Search">
+                <!-- Search icon button -->
+                <button class="icon" id="searchIcon" aria-label="Search"> <!-- Search icon button -->
                     <img src="Images/Search_icon.png" alt="Search Icon">
                 </button>
             </div>
         </div>
         
         <nav class="nav">
-            <a href="Pages/Trending.html">Trending</a>
-            <a href="Pages/Tech.html">Tech</a>
-            <a href="Pages/Innovation.html">Innovation</a>
-            <a href="Pages/Business.html">Business</a>
-            <a href="Pages/Security.html">Security</a>
-            <a href="Pages/Advice.html">Advice</a>
-            <a href="Pages/Buying_Guides.html">Buying Guides</a>
+            <!-- Navigation links -->
+            <a href="Pages/Trending.html">Trending</a> <!-- Links to the trending page -->
+            <a href="Pages/Tech.html">Tech</a> <!-- Links to the tech page -->
+            <a href="Pages/Innovation.html">Innovation</a> <!-- Links to the innovation page -->
+            <a href="Pages/Business.html">Business</a> <!-- Links to the business page -->
+            <a href="Pages/Security.html">Security</a> <!-- Links to the security page -->
+            <a href="Pages/Advice.html">Advice</a> <!-- Links to the advice page -->
+            <a href="Pages/Buying_Guides.html">Buying Guides</a> <!-- Links to the buying guides page -->
         </nav>
     </header>
 
     <div class="login-popup" id="loginPopup">
+        <!-- Login popup logo -->
         <img src="Images/Logo.png" alt="Pixel Pulse Logo" class="logo_login">
         <h2>Login</h2>
         <form id="loginForm">
+            <!-- Username input field -->
             <label for="username">Username</label>
             <input type="text" id="username" placeholder="Username" required>
+            <!-- Password input field -->
             <label for="password">Password</label>
             <input type="password" id="password" placeholder="Password" required>
+            <!-- Error message container -->
             <div id="errorMessage" class="errorMessage"></div>
+            <!-- Login button -->
             <button type="submit">Login</button>
         </form>
+        <!-- Signup link -->
         <a href="Pages/signup.html" id="signupLink">Don't have an account? Sign Up</a>
         <p class="social-media-logins">--------------------or-------------------</p>
+        <!-- Social media login buttons -->
         <button class="social-login"><i class="fab fa-facebook-f"></i>Login with Facebook</button>
         <button class="social-login"><i class="fab fa-google"></i>Login with Google</button>
     </div>
     
     <div class="search-popup" id="searchPopup">
         <form id="searchForm">
-            <input type="text" id="searchInput" placeholder="Search..." required>
-            <button type="submit">Search</button>
+            <!-- Search input field -->
+            <label for="searchInput" class="search-label">Search Pixel Pulse</label>
+            <input type="text" id="searchInput" placeholder="Enter keywords..." required>
+            <!-- Search button -->
+            <button type="submit" class="search-button">Search</button>
         </form>
     </div>
     
     <div class="container">
         <section class="margin_story">
             <h2>Today's Stories</h2>
+            <!-- List of today's stories -->
             <p class="story">Green Tech Startups to Watch in 2025</p>
             <p class="story">Smart Cities: The Future of Urban Living</p>
             <p class="story">The Evolution of Wearable Tech: What's Next?</p>
             <p class="story">The Role of Robotics in Modern Manufacturing</p>
             <p class="story">The Rise of Augmented Reality in Everyday Life</p>
+            <!-- Images related to articles -->
             <img src="Images/Laptops.png" alt="Modern laptops on a desk" class="image_articles">
             <img src="Images/Consoles.png" alt="Gaming consoles arranged neatly" class="image_articles">
         </section>
@@ -95,12 +114,15 @@
             <section class="comments">
                 <h2>Comments</h2>
                 <form id="commentForm">
+                    <!-- Comment form fields -->
                     <label for="commentName">Name:</label>
                     <input type="text" id="commentName" placeholder="Your name" required>
                     <label for="commentText">Comment:</label>
                     <textarea id="commentText" placeholder="Your comment" required></textarea>
+                    <!-- Submit button for comments -->
                     <button type="submit">Submit</button>
                 </form>
+                <!-- Container for displaying comments -->
                 <div id="commentsContainer">
                 </div>
             </section>
@@ -108,6 +130,7 @@
             <div>
                 <fieldset>
                     <legend>Top Stories This Week</legend>
+                    <!-- Ordered list of top stories -->
                     <ol>
                         <li>The Future of AI: Navigating the Path to Ethical Innovation</li>
                         <li>5G Revolution: How It's Shaping Our Connected World</li>
@@ -119,6 +142,7 @@
             <div>
                 <fieldset>
                     <legend>Recommendations</legend>
+                    <!-- Ordered list of recommendations -->
                     <ol>
                         <li>Best Phones on the Market (and How They Compare to Others)</li>
                         <li>Everything Required to Keep Warm in the Office & Accessories</li>
@@ -133,11 +157,13 @@
         <h2>Capture the Rhythm of Technology</h2>
         <p>Pixel Pulse 2025, A Joaquin Lewis-Atkins Company. All rights reserved.</p>
         <div>
+            <!-- Footer links -->
             <a href="Pages/privacy-policy.html">Privacy Policy</a>
             <a href="Pages/terms-of-service.html">Terms of Service</a>
         </div>
     </footer>
     
+    <!-- External JavaScript files -->
     <script src="Login.js"></script>
     <script src="Search.js"></script>
     <script src="Mode_switch.js"></script>

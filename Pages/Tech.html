@@ -6,9 +6,11 @@
     <meta name="description" content="Tech Page - The latest updates and trends in technology.">
     <title>Pixel Pulse - Tech</title>
     <link rel="stylesheet" href="../Pixel_Pulse_Styles.css">
+    <!-- Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+    <!-- Header section containing logo, website name, and icons -->
     <header class="header">
         <div class="header-row">
             <a href="../index.html">
@@ -16,15 +18,18 @@
             </a>
             <h1 class="website-name">Pixel Pulse</h1>
             <div class="icons">
+                <!-- Profile icon button -->
                 <button class="icon" id="profileIcon" aria-label="Profile">
                     <img src="../Images/Profile_icon.png" alt="Profile Icon">
                 </button>
+                <!-- Search icon button -->
                 <button class="icon" id="searchIcon" aria-label="Search">
                     <img src="../Images/Search_icon.png" alt="Search Icon">
                 </button>
             </div>
         </div>
 
+        <!-- Navigation bar with links to different sections -->
         <nav class="nav">
             <a href="Trending.html">Trending</a>
             <a href="Tech.html">Tech</a>
@@ -36,6 +41,7 @@
         </nav>
     </header>
 
+    <!-- Login popup form -->
     <div class="login-popup" id="loginPopup">
         <img src="../Images/Logo.png" alt="Pixel Pulse Logo" class="logo_login">
         <h2>Login</h2>
@@ -49,10 +55,12 @@
         </form>
         <a href="signup.html" id="signupLink">Don't have an account? Sign Up</a>
         <p class="social-media-logins">--------------------or-------------------</p>
+        <!-- Social media login buttons -->
         <button class="social-login"><i class="fab fa-facebook-f"></i>Login with Facebook</button>
         <button class="social-login"><i class="fab fa-google"></i>Login with Google</button>
     </div>
     
+    <!-- Search popup form -->
     <div class="search-popup" id="searchPopup">
         <form id="searchForm">
             <input type="text" id="searchInput" placeholder="Search..." required>
@@ -60,6 +68,7 @@
         </form>
     </div>
 
+    <!-- Main content container -->
     <div class="container">
         <section class="tech-section section">
             <h2>Latest in Tech</h2>
@@ -90,30 +99,7 @@
         </section>
     </div>
 
-    <div class="login-popup" id="loginPopup">
-        <img src="../Images/Logo.png" alt="Pixel Pulse Logo" class="logo_login">
-        <h2>Login</h2>
-        <form id="loginForm">
-            <label for="username">Username</label>
-            <input type="text" id="username" placeholder="Username" required>
-            <label for="password">Password</label>
-            <input type="password" id="password" placeholder="Password" required>
-            <div id="errorMessage" class="errorMessage"></div>
-            <button type="submit">Login</button>
-        </form>
-        <a href="signup.html" id="signupLink">Don't have an account? Sign Up</a>
-        <p class="social-media-logins">--------------------or-------------------</p>
-        <button class="social-login"><i class="fab fa-facebook-f"></i>Login with Facebook</button>
-        <button class="social-login"><i class="fab fa-google"></i>Login with Google</button>
-    </div>
-    
-    <div class="search-popup" id="searchPopup">
-        <form id="searchForm">
-            <input type="text" id="searchInput" placeholder="Search..." required>
-            <button type="submit">Search</button>
-        </form>
-    </div>
-
+    <!-- Footer section -->
     <footer>
         <h2>Capture the Rhythm of Technology</h2>
         <p>Pixel Pulse 2025, A Joaquin Lewis-Atkins Company. All rights reserved.</p>
@@ -123,6 +109,7 @@
         </div>
     </footer>
     
+    <!-- External JavaScript files -->
     <script src="../Login.js"></script>
     <script src="../Search.js"></script>
     <script src="../Mode_switch.js"></script>

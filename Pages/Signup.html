@@ -1,25 +1,29 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pixel Pulse - Signup Page</title>
     <style>
+        /* Center the heading and set its color */
         h2 {
             text-align: center;
             color: rgb(157, 14, 157);
         }
+        /* Style the form to be centered and vertically aligned */
         form {
             display: flex;
             flex-direction: column;
             width: 300px;
             margin: 0 auto;
         }
+        /* Style the input fields and button */
         input, button {
             margin-bottom: 10px;
             padding: 10px;
             font-size: 1em;
         }
+        /* Style for error messages */
         .errorMessage {
             color: red;
             font-size: 0.9em;
@@ -29,16 +33,24 @@
     </style>
 </head>
 <body>
+    <!-- Main container for the signup form -->
     <div>
         <h2>Sign Up</h2>
+        <!-- Signup form -->
         <form>
+            <!-- Username input field -->
             <input type="text" name="username" placeholder="Username" required>
+            <!-- Password input field -->
             <input type="password" name="password" placeholder="Password" required>
+            <!-- Confirm password input field -->
             <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
+            <!-- Error message container -->
             <div id="errorMessage" class="errorMessage"></div>
+            <!-- Submit button -->
             <button type="submit">Sign Up</button>
         </form>
     </div>
-    <script scr=signup.js></script>
+    <!-- External JavaScript file for signup functionality -->
+    <script src="signup.js"></script>
 </body>
 </html>

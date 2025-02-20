@@ -5,20 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Advice Page - Expert tips and guidance for navigating the tech world.">
     <title>Pixel Pulse - Advice</title>
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="../Pixel_Pulse_Styles.css">
+    <!-- Link to Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header class="header">
         <div class="header-row">
+            <!-- Link to homepage with logo -->
             <a href="../index.html">
                 <img src="../Images/Logo.png" alt="Pixel Pulse Logo" class="logo">
             </a>
+            <!-- Website name -->
             <h1 class="website-name">Pixel Pulse</h1>
             <div class="icons">
+                <!-- Profile icon button -->
                 <button class="icon" id="profileIcon" aria-label="Profile">
                     <img src="../Images/Profile_icon.png" alt="Profile Icon">
                 </button>
+                <!-- Search icon button -->
                 <button class="icon" id="searchIcon" aria-label="Search">
                     <img src="../Images/Search_icon.png" alt="Search Icon">
                 </button>
@@ -26,6 +32,7 @@
         </div>
 
         <nav class="nav">
+            <!-- Navigation links -->
             <a href="Trending.html">Trending</a>
             <a href="Tech.html">Tech</a>
             <a href="Innovation.html">Innovation</a>
@@ -37,25 +44,34 @@
     </header>
 
     <div class="login-popup" id="loginPopup">
+        <!-- Login popup logo -->
         <img src="../Images/Logo.png" alt="Pixel Pulse Logo" class="logo_login">
         <h2>Login</h2>
         <form id="loginForm">
+            <!-- Username input field -->
             <label for="username">Username</label>
             <input type="text" id="username" placeholder="Username" required>
+            <!-- Password input field -->
             <label for="password">Password</label>
             <input type="password" id="password" placeholder="Password" required>
+            <!-- Error message container -->
             <div id="errorMessage" class="errorMessage"></div>
+            <!-- Login button -->
             <button type="submit">Login</button>
         </form>
+        <!-- Signup link -->
         <a href="signup.html" id="signupLink">Don't have an account? Sign Up</a>
         <p class="social-media-logins">--------------------or-------------------</p>
+        <!-- Social media login buttons -->
         <button class="social-login"><i class="fab fa-facebook-f"></i>Login with Facebook</button>
         <button class="social-login"><i class="fab fa-google"></i>Login with Google</button>
     </div>
     
     <div class="search-popup" id="searchPopup">
         <form id="searchForm">
+            <!-- Search input field -->
             <input type="text" id="searchInput" placeholder="Search..." required>
+            <!-- Search button -->
             <button type="submit">Search</button>
         </form>
     </div>
@@ -95,11 +111,13 @@
         <h2>Capture the Rhythm of Technology</h2>
         <p>Pixel Pulse 2025, A Joaquin Lewis-Atkins Company. All rights reserved.</p>
         <div>
+            <!-- Footer links -->
             <a href="privacy-policy.html">Privacy Policy</a>
             <a href="terms-of-service.html">Terms of Service</a>
         </div>
     </footer>
     
+    <!-- External JavaScript files -->
     <script src="../Login.js"></script>
     <script src="../Search.js"></script>
     <script src="../Mode_switch.js"></script>

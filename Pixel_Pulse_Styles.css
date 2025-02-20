@@ -1,531 +1,639 @@
 :root {
-    --primary-color: #9D0E9D;
-    --secondary-color: #780A78;
-    --background-light: white;
-    --background-dark: #121212;
-    --text-light: black;
-    --text-dark: #e0e0e0;
-    --border-light: #ccc;
-    --border-dark: #333;
-    --font-primary: Georgia, 'Times New Roman', Times, serif;
-    --font-secondary: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  }
-  
+  /* Define color and font variables */
+  --primary-color: #BB6EF2;
+  --secondary-color: #AE50F1;
+  --background-light: white;
+  --background-dark: #121212;
+  --text-light: black;
+  --text-dark: #e0e0e0;
+  --border-light: #ccc;
+  --border-dark: #333;
+  --font-primary: Georgia, 'Times New Roman', Times, serif;
+  --font-secondary: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+  /* Apply primary font and set default styles */
+  font-family: var(--font-primary);
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-light);
+  color: var(--text-light);
+  overflow-x: hidden;
+}
+
+/* Logo and Login Popup */
+.logo_login {
+  /* Center logo and set size */
+  display: block;
+  margin: 0 auto 20px auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.login-popup {
+  /* Style login popup */
+  display: none;
+  position: absolute;
+  top: 70px;
+  right: 20px;
+  background-color: var(--background-light);
+  padding: 20px;
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 250px;
+}
+
+.login-popup h2 {
+  /* Style login popup header */
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  color: var(--primary-color);
+}
+
+.login-popup input {
+  /* Style input fields */
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid var(--border-light);
+  border-radius: 5px;
+  background-color: var(--background-light);
+  color: var(--text-light);
+}
+
+.login-popup input:focus {
+  /* Focus style for input fields */
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.login-popup button {
+  /* Style login button */
+  width: 100%;
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.login-popup button:hover {
+  /* Hover style for login button */
+  background-color: var(--secondary-color);
+}
+
+.login-popup button:focus {
+  /* Focus style for login button */
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+.login-popup a {
+  /* Style signup link */
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: var(--primary-color);
+  text-decoration: none;
+}
+
+.login-popup a:hover {
+  /* Hover style for signup link */
+  text-decoration: underline;
+}
+
+.social-media-logins {
+  /* Style for social media login text */
+  text-align: center;
+  margin-top: 10px;
+  color: var(--text-light);
+}
+
+.social-login {
+  /* Style for social media login buttons */
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-login i {
+  /* Style for social media icons */
+  margin-right: 8px;
+}
+
+/* Search Popup Styles */
+.search-popup {
+  /* Style search popup */
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 30px;
+  padding-left: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.search-popup.active {
+  /* Active state for search popup */
+  display: block;
+}
+
+.search-label {
+  /* Style for search label */
+  display: block;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+#searchInput {
+  /* Style for search input field */
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.search-button {
+  /* Style for search button */
+  width: 100%;
+  padding: 10px;
+  font-size: 1em;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  /* Hover style for search button */
+  background-color: #0056b3;
+}
+
+.errorMessage {
+  /* Style for error message */
+  color: red;
+  font-size: 0.9em;
+  margin: 10px 0;
+  display: none;
+}
+
+/* Header */
+.header {
+  /* Style for header */
+  background-color: black;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+}
+
+.header-row {
+  /* Style for header row */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.header-row .logo {
+  /* Style for logo in header */
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.header-row .website-name {
+  /* Style for website name in header */
+  align-items: center;
+  font-size: 4em;
+  font-family: var(--font-secondary);
+  color: var(--primary-color);
+  margin: 0;
+}
+
+.header-row .icons {
+  /* Style for icons in header */
+  display: flex;
+  gap: 10px;
+}
+
+.header-row .icon {
+  /* Style for individual icon buttons */
+  width: 24px;
+  height: 24px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.header-row .icon img {
+  /* Style for images inside icon buttons */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.nav {
+  /* Style for navigation bar */
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.nav a {
+  /* Style for navigation links */
+  text-decoration: none;
+  color: white;
+  font-size: 1em;
+}
+
+.nav a:hover {
+  /* Hover style for navigation links */
+  color: var(--primary-color);
+}
+
+.nav a:focus {
+  /* Focus style for navigation links */
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Main Content */
+.container {
+  /* Style for main content container */
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+}
+
+.margin_story {
+  /* Style for margin story section */
+  background-color: var(--background-light);
+  padding: 8px;
+  width: 30%;
+  border-top: var(--background-light) 5px solid;
+  border-right: var(--background-light) 5px solid;
+}
+
+.margin_story img {
+  /* Style for images in margin story section */
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 8px;
+}
+
+.margin_story p:hover {
+  /* Hover style for paragraphs in margin story section */
+  color: var(--primary-color);
+}
+
+.story {
+  /* Style for individual stories */
+  padding: 2px;
+  border-bottom: var(--primary-color) 1px solid;
+}
+
+.articles {
+  /* Style for articles section */
+  font-family: var(--font-primary);
+  width: 65%;
+}
+
+.articles h2:hover {
+  /* Hover style for article headers */
+  color: var(--primary-color);
+}
+
+.image_articles {
+  /* Style for images in articles */
+  position: relative;
+  width: 100%;
+}
+
+/* Footer */
+footer {
+  /* Style for footer */
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  width: 100%;
+}
+
+footer a {
+  /* Style for links in footer */
+  color: white;
+  text-decoration: none;
+  margin: 0 5px;
+}
+
+footer a:hover {
+  /* Hover style for links in footer */
+  color: var(--primary-color);
+}
+
+footer a:focus {
+  /* Focus style for links in footer */
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+/* Dark Mode */
+@media (prefers-color-scheme: dark) {
   body {
-    font-family: var(--font-primary);
-    margin: 0;
-    padding: 0;
-    background-color: var(--background-light);
-    color: var(--text-light);
-    overflow-x: hidden;
-  }
-  
-  /* Logo and Login Popup */
-  .logo_login {
-    display: block;
-    margin: 0 auto 20px auto;
-    width: 100px;
-    height: 100px;
-    border-radius: 50%;
-  }
-  
-  .login-popup {
-    display: none;
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    background-color: var(--background-light);
-    padding: 20px;
-    border: 1px solid var(--border-light);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    width: 250px;
-  }
-  
-  .login-popup h2 {
-    margin-bottom: 15px;
-    font-size: 1.5em;
-    color: var(--primary-color);
-  }
-  
-  .login-popup input {
-    width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid var(--border-light);
-    border-radius: 5px;
-    background-color: var(--background-light);
-    color: var(--text-light);
-  }
-  
-  .login-popup input:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
-  }
-  
-  .login-popup button {
-    width: 100%;
-    padding: 10px;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 10px;
-  }
-  
-  .login-popup button:hover {
-    background-color: var(--secondary-color);
-  }
-  
-  .login-popup button:focus {
-    outline: 2px solid var(--secondary-color);
-    outline-offset: 2px;
-  }
-  
-  .login-popup a {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    color: var(--primary-color);
-    text-decoration: none;
-  }
-  
-  .login-popup a:hover {
-    text-decoration: underline;
-  }
-  
-  .social-media-logins {
-    text-align: center;
-    margin-top: 10px;
-    color: var(--text-light);
-  }
-  
-  .social-login {
-    margin-top: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-  }
-  
-  .social-login i {
-    margin-right: 8px;
-  }
-  
-  /* Search Popup */
-  .search-popup {
-    display: none;
-    position: fixed;
-    top: 20%;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--background-light);
-    padding: 20px;
-    border: 1px solid var(--border-light);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-  }
-  
-  .search-popup input[type="text"] {
-    width: 80%;
-    padding: 10px;
-    margin-right: 10px;
-    border: 1px solid var(--border-light);
-    border-radius: 4px;
-    background-color: var(--background-light);
-    color: var(--text-light);
-  }
-  
-  .search-popup input[type="text"]:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
-  }
-  
-  .search-popup button {
-    padding: 10px 20px;
-    background-color: var(--primary-color);
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .search-popup button:hover {
-    background-color: var(--secondary-color);
-  }
-  
-  .search-popup button:focus {
-    outline: 2px solid var(--secondary-color);
-    outline-offset: 2px;
-  }
-  
-  .errorMessage {
-    color: red;
-    font-size: 0.9em;
-    margin: 10px 0;
-    display: none;
-  }
-  
-  /* Header */
-  .header {
-    background-color: black;
-    color: white;
-    padding: 10px 20px;
-    text-align: center;
-  }
-  
-  .header-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .header-row .logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-  }
-  
-  .header-row .website-name {
-    align-items: center;
-    font-size: 4em;
-    font-family: var(--font-secondary);
-    color: var(--primary-color);
-    margin: 0;
-  }
-  
-  .header-row .icons {
-    display: flex;
-    gap: 10px;
-  }
-  
-  .header-row .icon {
-    width: 24px;
-    height: 24px;
-    background-color: black;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-  }
-  
-  .header-row .icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .nav a {
-    text-decoration: none;
-    color: white;
-    font-size: 1em;
-  }
-  
-  .nav a:hover {
-    color: var(--primary-color);
-  }
-  
-  .nav a:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
-  }
-  
-  /* Main Content */
-  .container {
-    display: flex;
-    justify-content: space-between;
-    margin: 20px;
-  }
-  
-  .margin_story {
-    background-color: var(--background-light);
-    padding: 8px;
-    width: 30%;
-    border-top: var(--background-light) 5px solid;
-    border-right: var(--background-light) 5px solid;
-  }
-  
-  .margin_story img {
-    width: 100%;
-    height: auto;
-    margin-top: 10px;
-    border-radius: 8px;
-  }
-  
-  .margin_story p:hover {
-    color: var(--primary-color);
-  }
-  
-  .story {
-    padding: 2px;
-    border-bottom: var(--primary-color) 1px solid;
-  }
-  
-  .articles {
-    font-family: var(--font-primary);
-    width: 65%;
-  }
-  
-  .articles h2:hover {
-    color: var(--primary-color);
-  }
-  
-  .image_articles {
-    position: relative;
-    width: 100%;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    width: 100%;
-  }
-  
-  footer a {
-    color: white;
-    text-decoration: none;
-    margin: 0 5px;
-  }
-  
-  footer a:hover {
-    color: var(--primary-color);
-  }
-  
-  footer a:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
-  }
-  
-  /* Dark Mode */
-  @media (prefers-color-scheme: dark) {
-    body {
       background-color: var(--background-dark);
       color: var(--text-dark);
-    }
-  
-    .login-popup, .search-popup, .margin_story {
+  }
+
+  .login-popup, .search-popup, .margin_story {
       background-color: var(--background-dark);
       border-color: var(--border-dark);
-    }
-  
-    .login-popup input, .search-popup input[type="text"] {
+  }
+
+  .login-popup input, .search-popup input[type="text"] {
       background-color: var(--border-dark);
       border-color: var(--border-dark);
       color: var(--text-dark);
-    }
-  
-    .header, footer {
+  }
+
+  .header, footer {
       background-color: var(--background-dark);
-    }
-  
-    .header-row .icon {
+  }
+
+  .header-row .icon {
       background-color: var(--background-dark);
-    }
-  
-    .nav a, footer a {
+  }
+
+  .nav a, footer a {
       color: var(--text-dark);
-    }
-  
-    .nav a:hover, footer a:hover {
+  }
+
+  .nav a:hover, footer a:hover {
       color: var(--primary-color);
-    }
-  
-    .section, .tech-section, .business-section, .innovation-section, .security-section, .advice-section {
+  }
+
+  .section, .tech-section, .business-section, .innovation-section, .security-section, .advice-section {
       background-color: var(--background-dark);
       color: var(--text-dark);
-    }
-  
-    .section h2, .tech-section h2, .business-section h2, .innovation-section h2, .security-section h2, .advice-section h2 {
+  }
+
+  .section h2, .tech-section h2, .business-section h2, .innovation-section h2, .security-section h2, .advice-section h2 {
       color: var(--primary-color);
-    }
-  
-    .article {
+  }
+
+  .article {
       background-color: var(--background-dark);
       color: var(--text-dark);
-    }
-  
-    .article:hover {
+  }
+
+  .article:hover {
       background-color: #1e1e1e;
-    }
-  
-    .article-title {
+  }
+
+  .article-title {
       color: var(--text-dark);
-    }
-  
-    .article-summary {
+  }
+
+  .article-summary {
       color: #a0a0a0;
-    }
-  
-    .comments {
+  }
+
+  .comments {
       border-top-color: var(--border-dark);
-    }
-  
-    .comments form input, .comments form textarea {
+  }
+
+  .comments form input, .comments form textarea {
       background-color: var(--background-dark);
       color: var(--text-dark);
       border-color: var(--border-dark);
-    }
-  
-    .comments form button {
+  }
+
+  .comments form button {
       background-color: var(--primary-color);
       color: var(--text-dark);
-    }
-  
-    .comments form button:hover {
-      background-color: var(--secondary-color);
-    }
   }
-  
-  /* Comments Section */
-  .comments {
-    margin-top: 2rem;
-    padding: 1rem;
-    border-top: 1px solid #ccc;
-  }
-  
-  .comments h2 {
-    margin-bottom: 1rem;
-  }
-  
-  .comments form {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
-  }
-  
-  .comments form label {
-    margin-top: 0.5rem;
-  }
-  
-  .comments form input, .comments form textarea {
-    padding: 0.5rem;
-    margin-top: 0.25rem;
-  }
-  
-  .comments form input:focus, .comments form textarea:focus {
-    outline: 2px solid var(--primary-color);
-    outline-offset: 2px;
-  }
-  
-  .comments form button {
-    margin-top: 1rem;
-    padding: 0.5rem;
-    background-color: var(--primary-color);
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
+
   .comments form button:hover {
-    background-color: var(--secondary-color);
+      background-color: var(--secondary-color);
   }
-  
-  .comments form button:focus {
-    outline: 2px solid var(--secondary-color);
-    outline-offset: 2px;
+}
+
+/* Comments Section */
+.comments {
+  /* Style for comments section */
+  margin-top: 2rem;
+  padding: 1rem;
+  border-top: 1px solid #ccc;
+}
+
+.comments h2 {
+  /* Style for comments header */
+  margin-bottom: 1rem;
+}
+
+.comments form {
+  /* Style for comments form */
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.comments form label {
+  /* Style for labels in comments form */
+  margin-top: 0.5rem;
+}
+
+.comments form input, .comments form textarea {
+  /* Style for input fields in comments form */
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.comments form input:focus, .comments form textarea:focus {
+  /* Focus style for input fields in comments form */
+  outline: 2px solid var(--primary-color);
+  outline-offset: 2px;
+}
+
+.comments form button {
+  /* Style for submit button in comments form */
+  margin-top: 1rem;
+  padding: 0.5rem;
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+.comments form button:hover {
+  /* Hover style for submit button in comments form */
+  background-color: var(--secondary-color);
+}
+
+.comments form button:focus {
+  /* Focus style for submit button in comments form */
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
+}
+
+.comment {
+  /* Style for individual comments */
+  margin-bottom: 1rem;
+}
+
+.comment strong {
+  /* Style for strong text in comments */
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Shared Section Styles */
+.section {
+  /* Style for shared sections */
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.section h2 {
+  /* Style for headers in shared sections */
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  font-size: 2em;
+  text-align: center;
+}
+
+.article {
+  /* Style for individual articles */
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 10px;
+  background-color: var(--background-light);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.article:hover {
+  /* Hover style for individual articles */
+  background-color: #f0f0f0;
+}
+
+.article img {
+  /* Style for images in articles */
+  width: 150px;
+  height: 100px;
+  margin-right: 20px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.article-content {
+  /* Style for article content */
+  flex: 1;
+}
+
+.article-title {
+  /* Style for article titles */
+  font-size: 1.5em;
+  color: var(--text-light);
+  margin: 0 0 10px 0;
+}
+
+.article-summary {
+  /* Style for article summaries */
+  font-size: 1em;
+  color: gray;
+  margin: 0;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .header-row .website-name {
+      font-size: 2.5em; /* Smaller font size for mobile */
   }
-  
-  .comment {
-    margin-bottom: 1rem;
+
+  .header-row .icons {
+      gap: 5px; /* Reduce gap between icons */
   }
-  
-  .comment strong {
-    display: block;
-    margin-bottom: 0.5rem;
+
+  .nav {
+      flex-direction: column; /* Stack navigation links vertically */
+      gap: 10px;
   }
-  
-  /* Shared Section Styles */
-  .section {
-    margin: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
+
+  .container {
+      flex-direction: column; /* Stack main content vertically */
+      margin: 10px;
   }
-  
-  .section h2 {
-    margin-bottom: 20px;
-    color: var(--primary-color);
-    font-size: 2em;
-    text-align: center;
+
+  .margin_story {
+      width: 100%; /* Full width for mobile */
+      margin-bottom: 20px;
   }
-  
+
+  .articles {
+      width: 100%; /* Full width for mobile */
+  }
+
   .article {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 20px;
-    padding: 10px;
-    background-color: var(--background-light);
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      flex-direction: column; /* Stack article content vertically */
   }
-  
-  .article:hover {
-    background-color: #f0f0f0;
-  }
-  
+
   .article img {
-    width: 150px;
-    height: 100px;
-    margin-right: 20px;
-    border-radius: 8px;
-    object-fit: cover;
-  }
-  
-  .article-content {
-    flex: 1;
-  }
-  
-  .article-title {
-    font-size: 1.5em;
-    color: var(--text-light);
-    margin: 0 0 10px 0;
-  }
-  
-  .article-summary {
-    font-size: 1em;
-    color: gray;
-    margin: 0;
-  }
-  
-  /* Responsive Design for Smaller Screens */
-  @media (max-width: 768px) {
-    .article {
-      flex-direction: column;
-      align-items: flex-start;
-    }
-  
-    .article img {
-      width: 100%;
+      width: 100%; /* Full width for images */
       height: auto;
-      margin: 0 0 10px 0;
-    }
+      margin-right: 0;
+      margin-bottom: 10px;
   }
-  
-  /* Specific Sections */
-  .tech-section, .business-section, .innovation-section, .security-section, .advice-section .buying-guide-section {
-    margin: 20px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
+
+  .login-popup {
+      width: 90%; /* Wider popup for mobile */
+      top: 50px;
+      right: 5%;
   }
-  
-  .tech-section h2, .business-section h2, .innovation-section h2, .security-section h2, .advice-section h2 .buying-guide-section h2 {
-    margin-bottom: 20px;
-    color: var(--primary-color);
-    font-size: 2em;
-    text-align: center;
+
+  .search-popup {
+      width: 90%; /* Wider search popup for mobile */
+      padding: 20px;
   }
+}
+
+/* Specific Sections */
+.tech-section, .business-section, .innovation-section, .security-section, .advice-section .buying-guide-section {
+  /* Style for specific sections */
+  margin: 20px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.tech-section h2, .business-section h2, .innovation-section h2, .security-section h2, .advice-section h2 .buying-guide-section h2 {
+  /* Style for headers in specific sections */
+  margin-bottom: 20px;
+  color: var(--primary-color);
+  font-size: 2em;
+  text-align: center;
+}
